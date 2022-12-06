@@ -12,7 +12,7 @@
 #' }
 run_all <- function(dir = "R.d", verbose = TRUE) {
 
-  files <- list.files(dir, pattern="\\d+-.*\\.R$")
+  files <- list.files(dir, pattern="\\d+-.*\\.R$", full.names = TRUE)
 
   purrr::walk(files, function(f) {
     if ( verbose )
