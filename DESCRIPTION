@@ -1,0 +1,21 @@
+Package: rdotd
+Title: Use .d style files and configurations
+Version: 0.0.0.9000
+Authors@R: 
+    person("Steven", "Eschrich", , "Steven.Eschrich@moffitt.org", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Unix has a long history of .d directories which consist of
+ a series of config files or shell scripts prefixed by a two-digit number
+ to indicate run/parse order. This is convenient for versioning/managing
+ individual functions (per file) but maintaining a consistent flow. One
+ place this is useful is in loading raw data; typically there are a series
+ of steps that need to take place. With this library you can create an
+ R.d directory, with 01-do_something.R, 02-do_something_else.R, and
+ have them execute in order.
+License: Apache License (>= 2)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.2
+Imports: 
+    logger,
+    purrr
